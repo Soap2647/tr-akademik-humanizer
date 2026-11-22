@@ -14,7 +14,9 @@ bu bağlamda|bu doğrultuda|bu çerçevede|söz konusu|çerçevesinde|hususunda|
 yenilikçi|kapsamlı|bütüncül|benzersiz|son teknoloji|günümüzde|son yıllarda|giderek artan|
 olanak (tanı|sağla|sun)|katkı sağla|gerçekleştiril|sağlanmaktadır|niteliği taşı|hizmet etmekte|
 göz önünde bulundur|mümkündür|belirtmek gerekir|dikkat çekmekte|görülmektedir|söylenebilir|
-sonuç olarak|sinerji|ekosistem|katma değer|paydaş"""
+sonuç olarak|sinerji|ekosistem|katma değer|paydaş|
+, (ama|ancak|fakat|oysa|lakin) |şudur:|tam da|tam anlamıyla|gerçekten de|esasen|nihayetinde|
+bir bakıma|gerçek anlamda|sadece .{1,40} değil|aynı zamanda"""
 EN_KALIP = r"""pivotal|crucial|vital|groundwork|complemented by|underscore|highlight|landscape|leverag|
 robust|comprehensive|novel|seamless|testament|delve|foster|showcas|in order to|serves as"""
 SIRA = r"\b(Birincisi|İkincisi|Üçüncüsü|Dördüncüsü|Firstly|Secondly|Thirdly)\b"

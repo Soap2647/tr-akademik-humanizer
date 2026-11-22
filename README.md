@@ -6,7 +6,8 @@ Türkçe akademik metinlerdeki yapay zekâ izlerini temizleyen bir [Claude Code]
 
 ## Ne yapar
 
-- 27 maddelik bir **Türkçe AI kalıp kataloğuyla** metni tarar ([`references/kaliplar.md`](references/kaliplar.md)). Katalogda "Günümüzde hızla gelişen…" açılışları, "önemli bir rol oynamaktadır", isim tamlaması zincirleri, boş "gerçekleştirilecektir"ler, çeviri kokusu, şişirilmiş yaygın etki, noktalı virgül zincirleri ve "Birincisi… İkincisi…" sayımları var.
+- 31 maddelik bir **Türkçe AI kalıp kataloğuyla** metni tarar ([`references/kaliplar.md`](references/kaliplar.md)). Katalogda "Günümüzde hızla gelişen…" açılışları, "önemli bir rol oynamaktadır", isim tamlaması zincirleri, boş "gerçekleştirilecektir"ler, çeviri kokusu, şişirilmiş yaygın etki, noktalı virgül zincirleri, "Birincisi… İkincisi…" sayımları, "…, ancak" virgülü ve "şudur:" kalıbı var.
+- Uzun belgede önce her paragrafı ölçer, yüksek, orta ve temiz diye ayırır, sonra hangilerine dokunacağını sana sorar.
 - Metni yeniden yazar, ardından "yorgun bir panelist bunu okusa neresine takılır?" diye kendini denetler.
 - **Uydurmaz.** Kanıtı olmayan iddiaya kaynak eklemez; yerine `[KAYNAK?]`, `[ÖLÇÜT?]` ya da `[NETLEŞTİR: …]` işareti koyar.
 - **Dokunulmazlar:** sayılar, atıflar, terimler, iş paketi numaraları, form başlıkları. Metin orijinalden uzun olamaz, çünkü TÜBİTAK formlarında sayfa sınırı var.
@@ -64,7 +65,9 @@ python -I scripts/iz_skoru.py metin.txt
 
 ## Teşekkür
 
-Yapı ve yaklaşım, Siqi Chen'in [humanizer](https://github.com/blader/humanizer) skill'inden (MIT) ve Wikipedia'daki [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) rehberinden esinlenildi. Türkçe kalıp kataloğu ve TÜBİTAK kuralları bu repoya özgü.
+- Yapı ve yaklaşım, Siqi Chen'in [humanizer](https://github.com/blader/humanizer) skill'inden (MIT) ve Wikipedia'daki [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) rehberinden esinlenildi.
+- Büşra Begçecanlı'nın [turkce-humanizer](https://github.com/bushrabeg/turkce-humanizer) projesinden (MIT) şu fikirler akademik metne uyarlanarak alındı: karşıtlık bağlacından önce virgül, "şudur:" açıklama kalıbı ve cümle içi iki nokta, vurgu dolgu sözcükleri, bitişik "ki" ve eğik çizgi ayıracı, "-mektedir" ve cümle monotonluğu için sayısal eşikler, uzun belgede paragrafları sınıflandırıp kullanıcıya seçenek sunma ve çıktıda temiz bölümleri de belirtme. Oradaki "mutlak yasak" yaklaşımı yerine burada eşik kullanılıyor, çünkü akademik metinde liste ve tanım için noktalı virgül ve iki noktanın meşru kullanımları var. Türkçe genel metinler (blog, deneme, gazetecilik, edebi) için o proje daha uygun.
+- TÜBİTAK kuralları, uydurma yasağı, `.docx` akışı ve iki script bu repoya özgü.
 
 ## English
 

@@ -91,6 +91,29 @@ varsayılan üslup: sade, ölçülü, somut Türkçe akademik dil.
    çalıştır (kaynakçayı dahil etme). Skoru raporlarken her seferinde bunun bir
    AI dedektörü sonucu olmadığını söyle.
 
+## Uzun belge
+
+Üç paragraftan uzun belgede doğrudan yeniden yazmaya başlama:
+
+1. Her paragrafı `iz_skoru.py` ile ölç, paragrafları **yüksek (50+), orta
+   (25–49) ve temiz (0–24)** diye ayır.
+2. Kullanıcıya kısa bir tablo göster: kaç paragraf hangi grupta, en yüksek
+   beş paragraf hangileri.
+3. Seçenek sun: **yalnızca yüksekler**, **yüksek ve ortalar** veya **tümü**.
+   Kullanıcı seçmezse yüksek ve ortalarla başla.
+4. Dokunduğun her paragrafa hangi kalıpları düzelttiğini bir satırla yaz.
+
+## Kullanıcıya ne zaman sorulur
+
+Genelde sorma, makul varsayımla ilerle. Yalnızca şu iki durumda tek ve kısa bir
+soru sor:
+- Bir ifadenin AI izi mi yoksa yazarın bilinçli tercihi mi olduğu belirsizse
+  (ör. metin boyunca tutarlı kullanılan bir terim ya da bağlaç).
+- Düzeltme bir hipotezin, başarı ölçütünün veya ön-kayıt tanımının anlamını
+  değiştirebilecekse.
+
+Kullanıcı "sen bilirsin" derse varsayılanı uygula.
+
 ## .docx ile çalışma
 
 - Okuma ve yazma için `docx` skill'ini kullan.
@@ -107,7 +130,9 @@ varsayılan üslup: sade, ölçülü, somut Türkçe akademik dil.
 2. **İşaretler:** eklenen `[KAYNAK?]`, `[ÖLÇÜT?]`, `[NETLEŞTİR]` noktaları ve
    her birinde kullanıcıdan ne gerektiği, tek satırla
 3. **Değişiklik özeti:** en sık düzeltilen 3-6 kalıp türü, kısa
-4. **Sağlama sonucu:** sayı/atıf kontrolü temiz mi
+4. **Sağlama sonucu:** sayı/atıf kontrolü temiz mi; önce/sonra iz skoru
+5. **Notlar:** bilinçli tercih olabileceği için dokunmadığın yerler ve metinde
+   zaten temiz olan, iyi yazılmış bölümler. Yazar temiz yazmışsa bunu söyle.
 
 Taslağı ve panelist denetimini kullanıcı istemedikçe gösterme; uzun raporlarda
 çıktıyı şişirir.

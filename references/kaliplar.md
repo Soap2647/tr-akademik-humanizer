@@ -250,6 +250,56 @@ Doğrudan içeriğe gir.
 
 ---
 
+## E. NOKTALAMA VE VURGU
+
+Bu bölümdeki kalıpların çoğu [turkce-humanizer](https://github.com/bushrabeg/turkce-humanizer)
+projesinin sinyallerinden akademik metne uyarlandı. Oradaki "mutlak yasak"
+yaklaşımı yerine burada eşik kullanılır, çünkü akademik metinde liste ve
+tanım için iki nokta ve noktalı virgülün meşru kullanımları var.
+
+### 28. Karşıtlık bağlacından önce virgül
+**İzle:** ", ama", ", ancak", ", fakat", ", oysa", ", lakin"
+
+**Sorun:** İngilizcedeki "but/however" öncesi virgül alışkanlığının Türkçeye
+taşınması. Metinde birden fazla varsa iz sayılır.
+
+**Önce:** Plan hazırdı, ancak uygulamada aksadı.
+**Sonra:** Plan hazırdı ancak uygulamada aksadı.
+
+### 29. "Şudur:" açıklama kalıbı ve cümle içi iki nokta
+**İzle:** "X şudur:", "Kesin olan şudur:", "Asıl öğretici bulgu şudur:",
+"Ortaya çıkan tablo şudur:", paragrafta iki ve daha fazla "X: Y" açıklaması
+
+**Sorun:** İngilizcedeki "The thing is: …" yapısının çevirisi. Tek bir "şudur:"
+yeter; cümle içi iki nokta ise paragrafta ikiyi geçince iz olur. Liste ve
+tanım girişindeki iki nokta ("Başarı ölçütü: …") bu kalıba girmez.
+
+**Önce:** Asıl öğretici bulgu şudur: model diğer kohortta şans düzeyinde kaldı.
+**Sonra:** Asıl öğretici bulgu, modelin diğer kohortta şans düzeyinde kalmasıdır.
+
+### 30. Vurgu dolgu sözcükleri
+**İzle:** tam da, tam anlamıyla, gerçekten de, aslında, esasen, nihayetinde,
+kesinlikle (dolgu olarak), bir bakıma, gerçek anlamda, cümle başında "işte"
+
+**Sorun:** Türkçe vurguyu söz dizimiyle yapar, sözcük ekleyerek değil. İki ve
+daha fazlası iz sayılır. Silindiğinde anlam değişmiyorsa sil.
+
+### 31. Bitişik "ki" ve eğik çizgi ayıracı
+**İzle:** "durum şu ki" yerine "durum şuki" gibi yanlış bitişik yazımlar;
+"kullanıcı/müşteri/istemci" gibi eğik çizgili sıralamalar
+
+**Düzelt:** Bağlaç "ki"yi ayır (belki, çünkü, sanki, hâlbuki gibi kalıplaşmışlar
+hariç). Eğik çizgiyi "A, B veya C" yap. Teknik terimlerdeki yerleşik kullanım
+("plazma/serum", "BLAS/LAPACK") kalabilir.
+
+### Ölçülebilir eşikler (kalıp 9 ve 21 için)
+- Paragrafta dört ve daha fazla "-mektedir/-maktadır" yüklemi varsa alarm ver.
+- Cümle uzunluklarının standart sapması ortalamanın %30'undan azsa, ortalama
+  22 kelimeyi aşıyorsa ve 8 kelimeden kısa tam cümle hiç yoksa metin tekdüzedir.
+  En uzun cümleyi böl, araya kısa ama tam bir cümle koy. Yarım cümle kurma.
+
+---
+
 ## TÜBİTAK bölümlerine göre bakılacaklar
 
 - **Özgün Değer:** Kalıp 1, 2, 3, 5 en yoğun burada. Araştırma sorusu ve
