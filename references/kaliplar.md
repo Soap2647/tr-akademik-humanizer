@@ -193,6 +193,11 @@ kılmaktadır.
 ### 19. Uzun çizgi (—) `[K]` ve noktalı virgül bolluğu
 Türkçe akademik metinde uzun çizgi nadirdir. Virgül, parantez veya nokta kullan.
 
+**Not (2026-11 küçük testi):** ChatGPT öncesi 30 DergiPark özetinde insanlar
+AI'dan daha çok noktalı virgül ve 40+ kelimelik cümle kullanıyordu. Yani bunlar
+genel olarak AI izi değil, **okunabilirlik** sorunudur; skorda yer almazlar.
+Aşağıdaki gözlem tek bir uzun öneri metnine aittir.
+
 **Noktalı virgül zinciri** çok-turlu AI düzeltmesinden geçmiş, içerikçe güçlü
 metinlerde en belirgin iz olarak kalır: cümle başına 0,3'ün üstü şüphelidir
 (gerçek bir 1002-A taslağında 0,49 ölçüldü). Zinciri nokta ile böl. Parantez içi ve

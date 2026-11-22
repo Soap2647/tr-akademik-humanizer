@@ -51,11 +51,27 @@ Claude Code'a şöyle yazman yeterli:
 python -I scripts/kontrol.py orijinal.txt yeni.txt
 ```
 
-**AI iz skoru.** Metindeki ölçülebilir izleri 0–100 arası bir skora çevirir: noktalı virgül yoğunluğu, 40 kelimeyi aşan cümleler, cümle uzunluklarının tekdüzeliği, kalıp ifadeler ve sıra sözcükleri. Hangi ölçütten kaç puan geldiğini de gösterir:
+**AI iz skoru.** Metni 0–100 arası bir skora çevirir: cümle uzunluklarının tekdüzeliği (50), katalogdaki kalıp ifadeler (40) ve "Birincisi… İkincisi…" sayımı (10). Noktalı virgül ve uzun cümle oranını da gösterir ama bunlar skora girmez (aşağıya bak):
 
 ```bash
 python -I scripts/iz_skoru.py metin.txt
 ```
+
+### Skor ne kadar güvenilir?
+
+Küçük bir testle ölçtük. ChatGPT öncesi (2011–2020) 30 gerçek DergiPark Türkçe özeti iki gruba karşı kondu. Gruplar Claude Haiku ile üretildi:
+
+| Karşılaştırma | AUC |
+|---|---|
+| İnsan özeti ve aynı başlıktan **AI'nın sıfırdan yazdığı** özet | 0,83 |
+| İnsan özeti ve aynı özetin **AI ile cilalanmış** hali | 0,59 |
+
+AUC, rastgele seçilen bir AI metninin rastgele bir insan metninden yüksek skor alma olasılığıdır: 0,5 yazı tura, 1,0 kusursuz ayrım demek.
+
+- Sıfırdan AI metnini en iyi **tekdüzelik** ayırdı (tek başına 0,92). İnsan özetlerini aynı uzunluğa kısalttığımızda da 0,87'de kaldı, yani bu fark uzunluktan gelmiyor.
+- İlk sürümdeki **noktalı virgül** ve **uzun cümle** ölçütleri **ters çalıştı**. Türk akademisyenler AI'dan daha uzun cümle kuruyor ve daha çok noktalı virgül kullanıyor. Bu yüzden ikisi skordan çıkarıldı. İlk sürüm bu testte 0,44–0,50 alıyordu, yani yazı turadan iyi değildi.
+- **Cilalanmış metin** neredeyse ayırt edilemiyor. AI insan metninin kelimelerinin üçte ikisini koruyunca yüzeysel ölçüler yetmiyor.
+- **Sınırlar:** n=30, tek bir AI modeli, öneri değil makale özeti. Ağırlıklar aynı veriye bakılarak seçildi (yarı yarıya bölünce 0,82 ve 0,84), bu yüzden sonuç iyimser. Daha büyük ve farklı modellerle bir test gerekiyor.
 
 ## Bilmen gerekenler
 

@@ -99,6 +99,9 @@ varsayılan üslup: sade, ölçülü, somut Türkçe akademik dil.
 7. **İz skoru.** Önce/sonra için `python -I "<skill_dizini>/scripts/iz_skoru.py" metin.txt`
    çalıştır (kaynakçayı dahil etme). Skoru raporlarken her seferinde bunun bir
    AI dedektörü sonucu olmadığını söyle.
+   Skor, AI'nın sıfırdan yazdığı metni iyi ayırır (küçük testte AUC 0,83) ama
+   AI ile hafifçe cilalanmış insan metnini zayıf ayırır (AUC 0,59). Paragraf
+   düzeyinde bak; çok farklı bölümleri tek metin olarak ölçmek tekdüzeliği gizler.
 
 ## Uzun belge
 
