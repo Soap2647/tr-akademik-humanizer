@@ -103,6 +103,37 @@ varsayılan üslup: sade, ölçülü, somut Türkçe akademik dil.
    AI ile hafifçe cilalanmış insan metnini zayıf ayırır (AUC 0,59). Paragraf
    düzeyinde bak; çok farklı bölümleri tek metin olarak ölçmek tekdüzeliği gizler.
 
+## Ritim: en güçlü sinyal
+
+Küçük testte AI metnini insan metninden en iyi **cümle uzunluklarının
+tekdüzeliği** ayırdı. İnsan özetlerinde değişim katsayısı (standart sapma /
+ortalama) ortalama 0,41; AI'nın sıfırdan yazdığı metinde yaklaşık 0,2.
+Noktalı virgül ve uzun cümle ise genel olarak AI izi çıkmadı.
+
+- Dört ve daha fazla cümlelik her paragrafta değişim katsayısı **0,35'in
+  üstünde** olsun. Kontrol için: `python -I "<skill_dizini>/scripts/iz_skoru.py" metin.txt --paragraf`
+- Bunun için paragrafta en az bir **kısa ama tam** cümle (8 kelime ve altı) ve
+  en az bir **uzun** cümle (30 kelime ve üstü) bulunsun.
+- Uzun cümleyi bölerken **eşit parçalara bölme.** Bu, tekdüzeliği artırır.
+  Birini kısa bırak, diğerini komşu cümleyle birleştir.
+- Yarım cümle kurma. Kısa cümle de özne ve yüklem taşır ("Bu sinyal kanda
+  ölçülemez.").
+
+## Yazım modu: metni baştan yazarken
+
+Kullanıcı metni doğrudan yazdırıyorsa ("özgün değer bölümünü yaz", "yöntem
+kısmını taslakla") kuralları sonradan değil, yazarken uygula:
+
+1. **Önce malzeme iste, sonra yaz.** Sayılar, veri seti ve kohort adları,
+   yöntem seçiminin nedeni, ön çalışmada ters giden şey. Malzeme yoksa uydurma;
+   `[KAYNAK?]`, `[ÖLÇÜT?]`, `[NETLEŞTİR]` işaretleriyle boşluk bırak.
+2. Katalogdaki `[V]` kalıplarını hiç üretme. Koruma listesindeki Türkçe akademik
+   kalıpları kullan ("Bu çalışmada … amaçlanmıştır", "-ecektir").
+3. Ritim kuralına baştan uy.
+4. Yazdıktan sonra normal süreci çalıştır: tarama, panelist denetimi, iz skoru
+   (`--paragraf` ile).
+5. Kurum AI kullanım beyanı istiyorsa kullanıcıya hatırlat.
+
 ## Uzun belge
 
 Üç paragraftan uzun belgede doğrudan yeniden yazmaya başlama:

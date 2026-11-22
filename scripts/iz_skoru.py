@@ -9,7 +9,8 @@ AUC 0,59. Ağırlıklar bu veriye göre seçildi; iyimser bir tahmindir. Noktal�
 virgül ve uzun cümle bu veride ters yönde çalıştığı için (insanlar daha çok
 kullanıyor) skora girmez, yalnızca bilgi olarak gösterilir.
 
-Kullanım: python -I iz_skoru.py metin.txt
+Kullanım: python -I iz_skoru.py metin.txt [--paragraf]
+  --paragraf  tekdüze paragrafları (değişim katsayısı < 0,35) listeler
 """
 import re
 import statistics
@@ -76,10 +77,22 @@ def skor(text):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
+    if len(sys.argv) not in (2, 3) or (len(sys.argv) == 3 and sys.argv[2] != "--paragraf"):
         sys.exit(__doc__)
     sys.stdout.reconfigure(encoding="utf-8")
-    r = skor(open(sys.argv[1], encoding="utf-8").read())
+    metin = open(sys.argv[1], encoding="utf-8").read()
+    if len(sys.argv) == 3:
+        n = 0
+        for i, par in enumerate(p for p in metin.splitlines() if p.strip()):
+            lens = [len(s.split()) for s in cumleler(par)]
+            if len(lens) >= 4:
+                cv = statistics.pstdev(lens) / statistics.mean(lens)
+                if cv < 0.35:
+                    n += 1
+                    print(f"paragraf {i + 1}: değişim katsayısı {cv:.2f}, cümle uzunlukları {lens} | {par[:60]}…")
+        print(f"{n} tekdüze paragraf" if n else "Tekdüze paragraf yok.")
+        sys.exit(0)
+    r = skor(metin)
     print(f"AI iz skoru: {r['skor']}/100  (dedektör sonucu değildir)")
     for ad, w, aciklama in OLCUTLER:
         print(f"  {ad:15} {r['parcalar'].get(ad, 0):5}/{w}  {aciklama}")

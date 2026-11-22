@@ -8,6 +8,8 @@ Türkçe akademik metinlerdeki yapay zekâ izlerini temizleyen bir [Claude Code]
 
 - 40 maddelik bir **Türkçe AI kalıp kataloğuyla** metni tarar. Her kalıbın kanıt düzeyi işaretli: `[V]` DergiPark verisiyle AI izi olarak doğrulanmış, `[K]` doğrulanmamış (yalnızca kalite sorunu). Bir **koruma listesi** de var: "Bu çalışmada … amaçlanmıştır" gibi Türkçe akademik yazının meşru kalıplarına dokunmaz ([`references/kaliplar.md`](references/kaliplar.md)). Katalogda "Günümüzde hızla gelişen…" açılışları, "önemli bir rol oynamaktadır", isim tamlaması zincirleri, boş "gerçekleştirilecektir"ler, çeviri kokusu, şişirilmiş yaygın etki, noktalı virgül zincirleri, "Birincisi… İkincisi…" sayımları, "…, ancak" virgülü ve "şudur:" kalıbı var.
 - Uzun belgede önce her paragrafı ölçer, yüksek, orta ve temiz diye ayırır, sonra hangilerine dokunacağını sana sorar.
+- **Ritme bakar.** Testte AI metnini en iyi ayıran sinyal, cümle uzunluklarının tekdüzeliği çıktı. Bu yüzden her paragrafta kısa ve uzun cümleleri karıştırır, uzun cümleyi eşit parçalara bölmekten kaçınır. `iz_skoru.py --paragraf` tekdüze paragrafları listeler.
+- **Yazım modu:** metni baştan yazdırıyorsan kuralları sonradan değil, yazarken uygular. Önce sayı, veri ve yöntem gerekçesi gibi malzemeyi senden ister; malzeme yoksa uydurmaz, işaret bırakır.
 - Metni yeniden yazar, ardından "yorgun bir panelist bunu okusa neresine takılır?" diye kendini denetler.
 - **Uydurmaz.** Kanıtı olmayan iddiaya kaynak eklemez; yerine `[KAYNAK?]`, `[ÖLÇÜT?]` ya da `[NETLEŞTİR: …]` işareti koyar.
 - **Dokunulmazlar:** sayılar, atıflar, terimler, iş paketi numaraları, form başlıkları. Metin orijinalden uzun olamaz, çünkü TÜBİTAK formlarında sayfa sınırı var.

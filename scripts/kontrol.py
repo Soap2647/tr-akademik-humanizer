@@ -10,7 +10,7 @@ from collections import Counter
 # 12 | 3,5 | 1.250 | %40 | 40% | 1-2 (aralıklar ayrı sayılar olarak yakalanır)
 NUM = re.compile(r"%?\d+(?:[.,]\d+)*%?")
 # (Kaya, 2022) (Kaya ve Demir, 2022) (Kaya vd., 2022a; Smith et al., 2021)
-PAREN_CITE = re.compile(r"\(([^()]*?\b(?:19|20)\d{2}[a-z]?)\)")
+PAREN_CITE = re.compile(r"\(([^()\n]*?\b(?:19|20)\d{2}[a-z]?)\)")
 # [12] [3-5] [1, 4]
 BRACKET_CITE = re.compile(r"\[\s*\d+(?:\s*[-–,]\s*\d+)*\s*\]")
 
