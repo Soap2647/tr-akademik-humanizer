@@ -39,8 +39,11 @@ YAPMA. Akademik Türkçede insan izi şuradan gelir:
   süre, kaynak.
 - **Ritim çeşitliliği**: kısa bir cümleyi uzun bir cümle izler, her cümle
   "-mektedir" ile bitmez.
-- **Doğrudan söylemek**: "X'in Y üzerindeki etkisinin incelenmesi
-  amaçlanmaktadır" yerine "X'in Y'yi nasıl etkilediğini ölçeceğiz/ölçülecek".
+- **Türkçe akademik geleneği korumak**: "Bu çalışmada … incelenmesi
+  amaçlanmıştır" ya da "… ölçülecektir" Türkçedir. "Bu çalışma … incelemeyi
+  amaçlamaktadır" ve "Bulgular … olduğunu ortaya koymaktadır" ise İngilizceden
+  çeviridir (DergiPark verisinde ChatGPT sonrası 4–5 kat arttı). Edilgeni
+  etkene çevirmek AI izini azaltmaz, çoğaltır.
 - **Terim tutarlılığı**: aynı şeye her seferinde aynı adı vermek.
 - **Gerektiği kadar temkin**: ne "kesinlikle devrim yaratacak" ne
   "olabileceği düşünülmektedir" yığını.
@@ -63,6 +66,12 @@ YAPMA. Akademik Türkçede insan izi şuradan gelir:
 7. Kullanıcının **edilgen akademik üslubu** normaldir; tamamen etken hale
    çevirme, yalnızca öznesiz belirsizliği ve "-mektedir" yığınını kır. Kullanıcı
    "biz" diliyle yazıyorsa onu sürdür, yazmıyorsa sen başlatma.
+8. **Koruma listesindekilere dokunma** (`references/kaliplar.md`, bölüm H):
+   edilgen geçmiş zaman, tek bir temkin ifadesi, tek tük mantık bağları, alan
+   terimleri ("anlamlı fark", "geçerlik", "kritik değer").
+9. **Kanıt düzeyini doğru raporla.** `[V]` etiketli kalıpları "AI izi", `[K]`
+   etiketlileri "kalite sorunu" diye adlandır. Tek bir kullanım iz değildir;
+   sorun yoğunluktur.
 
 ## Ses kalibrasyonu (isteğe bağlı ama en güçlü kısım)
 
@@ -129,7 +138,9 @@ Kullanıcı "sen bilirsin" derse varsayılanı uygula.
 1. **Son metin** (veya .docx yolu)
 2. **İşaretler:** eklenen `[KAYNAK?]`, `[ÖLÇÜT?]`, `[NETLEŞTİR]` noktaları ve
    her birinde kullanıcıdan ne gerektiği, tek satırla
-3. **Değişiklik özeti:** en sık düzeltilen 3-6 kalıp türü, kısa
+3. **Değişiklik özeti:** en sık düzeltilen 3-6 kalıp türü, kısa. Kullanıcı
+   isterse ya da metin kısaysa üç sütunlu tablo ver: orijinal ifade, yeni hali,
+   kalıp numarası.
 4. **Sağlama sonucu:** sayı/atıf kontrolü temiz mi; önce/sonra iz skoru
 5. **Notlar:** bilinçli tercih olabileceği için dokunmadığın yerler ve metinde
    zaten temiz olan, iyi yazılmış bölümler. Yazar temiz yazmışsa bunu söyle.

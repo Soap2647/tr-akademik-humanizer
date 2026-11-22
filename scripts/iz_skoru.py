@@ -9,14 +9,22 @@ import re
 import statistics
 import sys
 
-TR_KALIP = r"""önemli (bir )?rol|kritik|büyük önem|önem arz|hayati önem|kilit rol|dönüm noktası|çığır aç|
-bu bağlamda|bu doğrultuda|bu çerçevede|söz konusu|çerçevesinde|hususunda|noktasında|
-yenilikçi|kapsamlı|bütüncül|benzersiz|son teknoloji|günümüzde|son yıllarda|giderek artan|
-olanak (tanı|sağla|sun)|katkı sağla|gerçekleştiril|sağlanmaktadır|niteliği taşı|hizmet etmekte|
-göz önünde bulundur|mümkündür|belirtmek gerekir|dikkat çekmekte|görülmektedir|söylenebilir|
-sonuç olarak|sinerji|ekosistem|katma değer|paydaş|
+# Çoğu kalıp omerfarukersin/turkce-akademik-humanizer'ın DergiPark verisiyle
+# doğrulanmış listesinden (TR kodları references/kaliplar.md'de). Orada AI izi
+# olarak doğrulanmayan "günümüzde", "son yıllarda", "göz önünde bulundurulduğunda"
+# bilerek listede yok. Alan terimleri (kritik değer, derinlemesine görüşme,
+# çok boyutlu ölçekleme) dışarıda tutulur.
+TR_KALIP = r"""önemli (bir )?rol|kilit rol|büyük önem|önem arz|hayati önem|kritik(?! (değer|dönem))|
+altını çiz|ışık tut|kayda değer|dikkat çekici|çarpıcı|vurgulamaktadır|önemini vurgula|
+keşfet|katkıda bulun|ile sonuçlan|zemin hazırla|önünü aç|köprü kur|teşvik et|olanak (tanı|sağla|sun)|
+kapsamlı|derinlemesine(?! görüşme)|çok (boyutlu|yönlü)(?! ölçekleme)|bütüncül|dinamikler|potansiyel|
+içgörü|girift|yenilikçi|dönüştürücü|stratejik|paydaş|perspektif|zorluklar|uzun vadeli|giderek artan|
+farkındalık (yarat|artır)|\w+ bir şekilde|hizmet etmekte|işlev gör|
+amaçlamaktadır|ortaya koymaktadır|Bu bulgular,|değerli (bilgi|bulgu|katkı)|politika yapıcı|
+gelecekteki (araştırma|çalışma)|teorik ve (pratik|uygulamalı)|
+bu bağlamda|bu doğrultuda|bu çerçevede|Buna ek olarak|Bunun yanı sıra|sinerji|katma değer|
 , (ama|ancak|fakat|oysa|lakin) |şudur:|tam da|tam anlamıyla|gerçekten de|esasen|nihayetinde|
-bir bakıma|gerçek anlamda|sadece .{1,40} değil|aynı zamanda"""
+bir bakıma|gerçek anlamda|sadece .{1,40} değil|aynı zamanda|, ki bu da"""
 EN_KALIP = r"""pivotal|crucial|vital|groundwork|complemented by|underscore|highlight|landscape|leverag|
 robust|comprehensive|novel|seamless|testament|delve|foster|showcas|in order to|serves as"""
 SIRA = r"\b(Birincisi|İkincisi|Üçüncüsü|Dördüncüsü|Firstly|Secondly|Thirdly)\b"

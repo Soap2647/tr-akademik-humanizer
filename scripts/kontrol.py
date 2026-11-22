@@ -45,6 +45,8 @@ def main():
     old_nums, old_cites = extract(old_text)
     new_nums, new_cites = extract(new_text)
     dirty = report("sayı", old_nums, new_nums) | report("atıf", old_cites, new_cites)
+    ratio = len(new_text) / max(len(old_text), 1)
+    print(f"Uzunluk oranı: {ratio:.2f}" + ("  (orijinalden uzun)" if ratio > 1 else ""))
     print("FARK VAR" if dirty else "TEMİZ: sayılar ve atıflar aynı.")
     sys.exit(1 if dirty else 0)
 

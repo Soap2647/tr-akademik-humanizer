@@ -4,11 +4,18 @@ Her kalıp: izlenecek ifadeler, sorun, önce/sonra. Bir ifadenin geçmesi tek
 başına suç değil; sorun **yoğunluk** ve **içi boşluk**. Paragrafta bir kez
 "bu bağlamda" normaldir, üç kez AI'dır.
 
+**Kanıt etiketleri.** `[V]` işaretli kalıplar, 2016–2021 ile 2024–2026 arasındaki
+46 bin DergiPark Türkçe özetinin karşılaştırıldığı veriyle AI izi olarak
+doğrulandı ([omerfarukersin/turkce-akademik-humanizer](https://github.com/omerfarukersin/turkce-akademik-humanizer),
+kodlar onların kataloğundaki numaralar). `[K]` işaretliler o veride AI izi
+olarak doğrulanmadı. Bunları yine düzelt ama **kalite sorunu** diye düzelt,
+"AI izi" diye raporlama. Etiketsizler henüz ölçülmedi.
+
 ---
 
 ## A. İÇERİK KALIPLARI
 
-### 1. Önem şişirme
+### 1. Önem şişirme `[V]` (TR01, TR02, TR11)
 **İzle:** önemli bir rol oynamaktadır, kritik öneme sahiptir, büyük önem arz
 etmektedir, kilit rol, dönüm noktası, çığır açacaktır, vazgeçilmez bir unsur,
 hayati önem taşımaktadır, ön plana çıkmaktadır
@@ -20,12 +27,14 @@ oynamaktadır.
 **Sonra:** Mildiyö erken fark edilmezse domates rekoltesinde %40'a varan kayıp
 yaşanabiliyor [KAYNAK?].
 
-### 2. "Günümüzde" girişi
+### 2. "Günümüzde" girişi `[K]`
 **İzle:** Günümüzde hızla gelişen teknolojiyle birlikte…, Son yıllarda
 giderek artan…, Dijital dönüşüm çağında…, Küreselleşen dünyada…, Teknolojinin
 baş döndürücü hızla ilerlediği…
 
 **Sorun:** Her öneriye yapıştırılabilecek açılış. Panelist ilk cümlede atlar.
+Türkçe özetlerde ChatGPT sonrası artmadığı için AI izi sayılmaz; TÜBİTAK
+önerisinde yine de zayıf bir açılıştır.
 
 **Önce:** Günümüzde yapay zekâ teknolojilerinin hızla gelişmesiyle birlikte
 sağlık alanında birçok yenilikçi uygulama ortaya çıkmaktadır.
@@ -41,7 +50,7 @@ gösterildiği üzere, yapılan araştırmalar ortaya koymaktadır (atıf yok)
 **Düzelt:** Kaynak varsa bağla, yoksa `[KAYNAK?]` koy. Boşluğu somut söyle:
 hangi yöntem, hangi veri, hangi bağlamda denenmedi.
 
-### 4. Belirsiz atıf
+### 4. Belirsiz atıf `[K]`
 **İzle:** uzmanlar, araştırmacılar tarafından vurgulanmaktadır, literatürde
 sıklıkla belirtildiği üzere, bilim insanları, ilgili çevreler
 
@@ -49,7 +58,7 @@ sıklıkla belirtildiği üzere, bilim insanları, ilgili çevreler
 **Sonra:** Kaya ve Demir (2022) bu yaklaşımla hata oranını %12'den %7'ye
 indirdi. (Atıf yoksa: [KAYNAK?])
 
-### 5. Tanıtım dili
+### 5. Tanıtım dili `[V]` (TR07, TR10, TR17)
 **İzle:** yenilikçi, çığır açan, benzersiz, son teknoloji, kapsamlı,
 bütüncül, eşsiz, öncü, devrim niteliğinde, üstün performanslı
 
@@ -108,7 +117,7 @@ eğitilmektedir. Sonuçlar değerlendirilmektedir.
 **Sonra:** Toplanan veriler önce temizlenecek, ardından modeli eğitmekte
 kullanılacak. Değerlendirmede F1 skoru esas alınır.
 
-### 10. "Olmak" yerine dolambaç
+### 10. "Olmak" yerine dolambaç `[V]` (TR22)
 **İzle:** olarak hizmet vermektedir, niteliği taşımaktadır, özelliğine
 sahiptir, işlevi görmektedir, konumundadır, durumundadır
 
@@ -130,7 +139,7 @@ sağlamak, fayda sağlamak, analiz gerçekleştirmek, değerlendirme yapmak
 **Önce:** Anket çalışması gerçekleştirilecek ve verilerin analizi yapılacaktır.
 **Sonra:** 300 kişiye anket uygulanacak, veriler SPSS ile analiz edilecek.
 
-### 13. "Sadece… değil, aynı zamanda" ve "X değil, Y"
+### 13. "Sadece… değil, aynı zamanda" ve "X değil, Y" `[V]` (TR25)
 **Önce:** Bu proje sadece bir yazılım değil, aynı zamanda bir dönüşüm
 aracıdır.
 **Sonra:** (Genelde tamamen sil; altında somut bir iddia varsa onu yaz.)
@@ -164,7 +173,7 @@ değilse panelist "proje yönetimi zayıf" der.
 **Sonra:** İP1 (Ay 1-2): Yürütücü literatürü tarayacak; bursiyer veri toplama
 protokolünü hazırlayacak.
 
-### 18. Çeviri kokusu
+### 18. Çeviri kokusu ("Bu," ile başlamak `[K]`)
 **İzle:** Bu, …anlamına gelmektedir; Bu, …yı mümkün kılar; …e odaklanmak
 (her yerde); oyun değiştirici; ölçeklenebilir çözüm; bir adım öteye taşımak;
 …nın gücünden yararlanmak; günün sonunda; sağlam bir temel
@@ -181,7 +190,7 @@ kılmaktadır.
 
 ## C. BİÇİM KALIPLARI
 
-### 19. Uzun çizgi (—) ve noktalı virgül bolluğu
+### 19. Uzun çizgi (—) `[K]` ve noktalı virgül bolluğu
 Türkçe akademik metinde uzun çizgi nadirdir. Virgül, parantez veya nokta kullan.
 
 **Noktalı virgül zinciri** çok-turlu AI düzeltmesinden geçmiş, içerikçe güçlü
@@ -218,7 +227,7 @@ Aşağıda … sunulmuştur; Harika bir soru
 
 Sil. Metinde kalmışsa kesin AI işaretidir.
 
-### 24. Dolgu kalıpları
+### 24. Dolgu kalıpları ("göz önünde bulundurulduğunda" `[K]`)
 **İzle:** şunu belirtmek gerekir ki, ifade etmek mümkündür, söylemek yanlış
 olmaz, göz önünde bulundurulduğunda, bilindiği üzere, …dığı görülmektedir,
 …dığı söylenebilir, dikkat çekmektedir
@@ -231,10 +240,14 @@ olduğunu söylemek mümkündür.
 **İzle:** olabileceği düşünülmektedir, potansiyel olarak, muhtemelen …
 olabilir, belirli ölçüde, bir dereceye kadar (aynı cümlede birden fazla)
 
+**Dikkat:** Tek bir "-abilir" ya da "olduğu düşünülmektedir" Türkçe akademik
+yazının meşru temkin aracıdır, silinirse iddia güçlenir. Yalnızca aynı cümlede
+üst üste binen temkinleri azalt.
+
 **Düzelt:** Tek ve yerinde bir temkin bırak. Hipotezi hipotez olarak söyle:
 "H1: X, Y'yi artırır."
 
-### 26. Genel olumlu kapanış
+### 26. Genel olumlu kapanış `[V]` (TR06, TR31)
 **İzle:** Sonuç olarak bu proje alana önemli katkılar sunacaktır; parlak bir
 gelecek; yeni ufuklar açacaktır; ilham kaynağı olacaktır
 
@@ -297,6 +310,115 @@ hariç). Eğik çizgiyi "A, B veya C" yap. Teknik terimlerdeki yerleşik kullan�
 - Cümle uzunluklarının standart sapması ortalamanın %30'undan azsa, ortalama
   22 kelimeyi aşıyorsa ve 8 kelimeden kısa tam cümle hiç yoksa metin tekdüzedir.
   En uzun cümleyi böl, araya kısa ama tam bir cümle koy. Yarım cümle kurma.
+
+---
+
+## F. VERİYLE DOĞRULANMIŞ EK KALIPLAR
+
+Bu bölümdeki bulgular ve kodlar [omerfarukersin/turkce-akademik-humanizer](https://github.com/omerfarukersin/turkce-akademik-humanizer)
+(MIT) çalışmasından özetlendi. Yüzdeler, 2016–2021 ve 2024–2026 DergiPark
+özetlerinde kalıbın geçtiği özet oranıdır.
+
+### 32. Etken çatıyla amaç: "Bu çalışma … amaçlamaktadır" `[V]` (TR49)
+**Sorun:** Türkçe gelenek edilgendir: "Bu çalışmada … incelenmesi amaçlanmıştır".
+AI bunu İngilizcedeki "This study aims to…" yapısına çeviriyor (%3,0 → %14,1).
+İngilizce humanizer'ların "edilgenden kaçın" kuralı Türkçede tersine çalışır.
+
+**Önce:** Bu çalışma, öğretmenlerin dijital yeterliklerini incelemeyi amaçlamaktadır.
+**Sonra:** Bu çalışmada öğretmenlerin dijital yeterliklerinin incelenmesi amaçlanmıştır.
+
+TÜBİTAK önerisinde amaç gelecek zamanla da yazılabilir ("… incelenecektir").
+Önemli olan, özne olarak "Bu proje/çalışma, …-mayı amaçlamaktadır" kalıbından
+kaçınmaktır.
+
+### 33. Bulgular için şimdiki zaman `[V]` (TR50)
+**İzle:** "Bulgular, … olduğunu ortaya koymaktadır / göstermektedir"
+(%3,8 → %19,6)
+
+**Düzelt:** Edilgen geçmiş zaman: "… olduğu belirlenmiştir / bulunmuştur /
+saptanmıştır". TÜBİTAK önerisinde bu en çok **ön çalışma bulgularında** geçer.
+
+### 34. "Bu bulgular, …" açılışı `[V]` (TR55)
+Bulgudan sonra gelen yorum cümlesinin kalıp açılışı (%0,1 → %2,1). Yorumu
+bulguya bağla. Çoğu zaman yorum cümlesi gereksizdir.
+
+### 35. Ekleme bağlaçlarının yığılması `[V]` (TR38, TR39, TR43, TR-O3)
+**İzle:** cümle başında "Ayrıca", "Buna ek olarak", "Bununla birlikte",
+"Bunun yanı sıra", "Özellikle"
+
+**Sorun:** Tek tük kullanım olağandır. Sorun yığılmadır: aynı türden bağlaç
+paragrafta birden fazlaysa ya da cümlelerin %29'undan fazlası bir geçiş
+ifadesiyle başlıyorsa (insan özetlerinin 95. yüzdeliği) iz sayılır.
+
+**Düzelt:** Bağlacı çıkar, ekleme için "da/de" yeterli olabilir. Ya da
+**anlamsal zincirleme** kullan: önceki cümlenin nesnesini ya da bulgusunu yeni
+cümlenin öznesi yap.
+
+**Önce:** Sistemde önbellek kullanılmıştır. Bununla birlikte, bellek tüketimi %15 artmıştır.
+**Sonra:** Sistemde kullanılan önbellek, bellek tüketimini %15 artırmıştır.
+
+### 36. AI'nin sevdiği sözcükler `[V]`
+Aşağıdakiler ChatGPT sonrası özetlerde belirgin biçimde arttı. Tek kullanım
+sorun değildir; metin uzunluğuna göre sıklaştıkça iz olur.
+
+- **Anlam yükleme:** altını çizmek (TR03), ışık tutmak (TR04), kayda değer,
+  dikkat çekici, çarpıcı (TR14), vurgulamak (TR35)
+- **Çeviri fiiller:** keşfetmek (TR26, explore), katkıda bulunmak, ile
+  sonuçlanmak (TR27), zemin hazırlamak, önünü açmak, köprü kurmak (TR28),
+  teşvik etmek, güçlendirmek, kolaylaştırmak (TR36), olanak tanımak/sağlamak (TR37)
+- **Sözcükler:** kapsamlı (TR07), derinlemesine (TR08), çok boyutlu/çok yönlü
+  (TR09), bütüncül (TR10), dinamikler (TR12), potansiyel (TR13), içgörü (TR15),
+  karmaşık/girift (TR16), yenilikçi/dönüştürücü (TR17), stratejik (TR18),
+  paydaş (TR19), perspektif (TR20), zorluklar (TR51), uzun vadeli (TR53),
+  giderek artan (TR54), farkındalık yaratmak (TR30)
+- **Zarf yığılması:** "… bir şekilde" (TR23): "kapsamlı bir şekilde",
+  "etkili bir şekilde"
+
+### 37. Jenerik kapanış ve öneri `[V]` (TR31–TR34, TR52)
+"değerli bilgiler/bulgular sunmak", "politika yapıcılar", "…ın önemini ortaya
+koymak/vurgulamak", "gelecekteki araştırmalar", "teorik ve pratik katkı".
+TÜBİTAK'ın Yaygın Etki bölümünde sık görülür. Çıktıyı ve kimin kullanacağını
+somut söyle.
+
+### 38. "-mektedir" oranı (TR-O2, kalıp 9'un sayısal eşiği)
+İnsan özetlerinde cümlelerin ortalama %21'i "-mektedir/-maktadır" ile biter,
+95. yüzdelik %60'tır. Oran %60'ı geçiyorsa yüklemleri çeşitlendir ("-dır",
+"-mıştır", "-ır", "-acaktır").
+
+## G. ÇEVİRİ SÖZDİZİMİ
+
+Bu iki kalıp [BatuhanOzdemir7/turkish-academic-humanizer](https://github.com/BatuhanOzdemir7/turkish-academic-humanizer)
+projesindeki fikirlerden uyarlandı. Henüz veriyle ölçülmedi.
+
+### 39. Gereksiz "bir" (İngilizcedeki a/an)
+**Önce:** Model yüksek bir doğruluk göstermiş ve önemli bir düşüş sağlamıştır.
+**Sonra:** Model yüksek doğruluk göstermiş, hata oranını belirgin biçimde düşürmüştür.
+
+### 40. Sarkan "…, ki bu da …" kuyruğu
+İngilizcedeki ", highlighting the importance of X" yapısının çevirisi.
+**Önce:** Hata oranı %12'den %7'ye düştü, ki bu da yöntemin etkinliğini vurgulamaktadır.
+**Sonra:** Hata oranı %12'den %7'ye düştü.
+
+## H. KORUMA LİSTESİ: AI İZİ OLMAYANLAR
+
+Türkçe akademik yazının meşru araçlarını silme. İngilizce kurallardan
+aktarılan "edilgenden kaçın" gibi öneriler burada yanlıştır. Bu liste
+[omerfarukersin/turkce-akademik-humanizer](https://github.com/omerfarukersin/turkce-akademik-humanizer)
+projesinin koruma listesinden özetlendi.
+
+- **Edilgen geçmiş zaman:** "Bu çalışmada …", "… amaçlanmıştır / incelenmiştir /
+  belirlenmiştir", "elde edilmiştir", "… kullanılmıştır"
+- **Temkin:** tek bir "-abilir/-ebilir", "olduğu düşünülmektedir"
+- **Mantık bağları:** tek tük "Ancak", "Bu nedenle", "Dolayısıyla", "ise",
+  "Öte yandan", "Diğer taraftan"
+- **Olağan gönderim ve açılış:** "literatürde", "alanyazında", "Günümüzde",
+  "Son yıllarda"
+- **Alan terimleri:** istatistikte "anlamlı fark", ölçmede "geçerlik/güvenirlik",
+  psikolojide "içgörü", "derinlemesine görüşme", "çok boyutlu ölçekleme",
+  "kritik değer", "kritik dönem"
+- **Biçim:** "Amaç:", "Yöntem:" gibi yapılandırılmış özet başlıkları, atıf
+  biçimi, sayı biçimi (ondalık virgül ya da nokta, metin neyse o)
+- **Birinci çoğul:** yazar "inceledik" diyorsa edilgene çevirme
 
 ---
 
